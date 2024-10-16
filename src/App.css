@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+/* * {
+    font-family: 'Tangerine';
+    font-size: larger;
+} */
