@@ -6,7 +6,7 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return ( 
-        <nav className="flex items-center justify-between flex-wrap p-6 bg-white border-gray-200 dark:bg-cyan-800">
+        <nav className="flex items-center justify-between flex-wrap p-6 bg-white border-gray-200 dark:bg-cyan-700">
             <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
                 <a href='/'>
                     <img src={ Logo } className="w-100 h-10 mr-2" alt="Logo" />
@@ -40,18 +40,18 @@ const Nav = () => {
             className={`w-full block flex-wrap lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
             >
                 <div className="text-sm lg:flex-grow">
-                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-cyan-800 md:dark:bg-cyan-800 dark:border-cyan-700">
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-cyan-800 md:dark:bg-cyan-700 dark:border-cyan-600">
                         <li>
-                            <a href="/" id='Nav' class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                            <a href="/" id='Nav' class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
                         </li>
                         <li>
-                            <a href="/About" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                            <a href="/About" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
                         </li>
                         <li>
-                            <a href="/Choices" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Choices</a>
+                            <a href="/Choices" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Choices</a>
                         </li>
                         <li>
-                            <a href="/Settings" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Settings</a>
+                            <a href="/Settings" class="flex items-center py-2 px-3 hover:underline underline-offset-4 hover:decoration-2 text-cyan-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-cyan-700 dark:hover:text-white md:dark:hover:bg-transparent">Settings</a>
                         </li>
                     </ul>
                 </div>
