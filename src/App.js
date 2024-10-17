@@ -5,6 +5,8 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+// assets
+import BgImage from './assets/Butterfly-Effect-Bg.png';
 // components
 const Nav = lazy(() => import('./components/Nav'));
 const Home = lazy(() => import('./pages/Home'));
@@ -15,13 +17,17 @@ const Settings = lazy(() => import('./pages/Settings'));
 function App() {
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route exact path='/' element={ <Home />} />
-        <Route path='/About' element={ <About />} />
-        <Route path='/Choices' element={ <Choices />} />
-        <Route path='/Settings' element={ <Settings />} />
-      </Routes>
+      <div className='flex flex-col h-screen'>
+        <Nav />
+        <div className='flex-grow bg-repeat-space' style={{backgroundImage: `url(${BgImage})`, backgroundSize: '150px'}}>
+          <Routes>
+            <Route exact path='/' element={ <Home />} />
+            <Route path='/About' element={ <About />} />
+            <Route path='/Choices' element={ <Choices />} />
+            <Route path='/Settings' element={ <Settings />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }

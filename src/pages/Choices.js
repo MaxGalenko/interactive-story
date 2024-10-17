@@ -7,5 +7,5 @@ const Choices = () => {
         </div>
     );
 }
- 
+
 export default Choices;

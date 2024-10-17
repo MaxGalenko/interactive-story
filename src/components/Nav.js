@@ -5,14 +5,14 @@ import Logo from '../assets/Butterfly-Effect-Logo.png';
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    return ( 
+    return (
         <nav className="flex items-center justify-between flex-wrap p-6 bg-white border-gray-200 dark:bg-cyan-700">
             <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
                 <a href='/'>
                     <img src={ Logo } className="w-100 h-10 mr-2" alt="Logo" />
                 </a>
                 <a href='/'>
-                    <h1 className='text-xl text-transparent bg-clip-text bg-gradient-to-r to-emerald-500 from-sky-50'>My Interactive-Story</h1>
+                    <h1 className='text-xl text-transparent bg-clip-text bg-gradient-to-r to-emerald-500 from-sky-50'>Whispers in the Woods</h1>
                 </a>
             </div>
             <div className="block lg:hidden">
