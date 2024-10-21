@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div className="flex justify-center">
-            <div className="bg-white border rounded-lg p-10 mt-28 mx-6 sm:w-2/3 md:w-3/5 lg:w-1/2 xl:w-2/5 2xl:w-1/3 lg:mt-44 shadow-xl">
+            <div className="bg-white border rounded-lg shadow-xl p-10 mt-44 mx-10 w-620">
                 <h1 className="text-center text-2xl font-bold">Welcome to Whispers in the Woods</h1>
                 <br></br>
                 <p className="text-center">Enter a chilling tale of mystery and terror where your choices determine 
