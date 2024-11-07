@@ -194,7 +194,7 @@ const Story = () => {
 
     return (
         <div className="flex justify-center">
-            <div className='bg-white border rounded-lg shadow-xl p-10 mt-44 mx-10 w-620'>
+            <div className='bg-white border rounded-lg shadow-xl p-10 my-12 mx-10 w-620'>
                 <h1 className="text-lg text-justify font-semibold">{currentStory.text}</h1>
                 <div className="mt-4 flex justify-center">
                     {bothChoicesLeadToEnd ? (

@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       spacing: {
         '620': '620px',
+        '104': '104px',
       }
     },
   },
