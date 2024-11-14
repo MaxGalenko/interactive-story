@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import TypeWriterEffect from 'react-typewriter-effect';
 
 const Story = () => {
     const [currentSegment, setCurrentSegment] = useState(0);
+    const [typingFinished, setTypingFinished] = useState(false);
 
     const segments = [
         {
@@ -192,10 +194,32 @@ const Story = () => {
         currentStory.choices[0].nextSegment === 0 &&
         currentStory.choices[1].nextSegment === 0;
 
+    const typingTime = currentStory.text.length * 30 + 1500;
+
+    // Reset typingFinished and start timer when segment changes
+    useEffect(() => {
+        setTypingFinished(false);  // Hide buttons at the start of each segment
+        const timer = setTimeout(() => {
+            setTypingFinished(true);  // Show buttons once typing is done
+        }, typingTime);
+
+        return () => clearTimeout(timer);  // Cleanup timer if component unmounts or changes
+    }, [currentSegment, typingTime]);  // Effect depends on currentSegment
+
     return (
         <div className="flex justify-center">
             <div className='bg-white border rounded-lg shadow-xl p-10 my-12 mx-10 w-620'>
-                <h1 className="text-lg text-justify font-semibold">{currentStory.text}</h1>
+                <div className="text-lg font-medium">
+                    <TypeWriterEffect
+                        textStyle={{ textAlign: "justify" }}
+                        key={currentSegment} // Re-renders the text when the currentSegment changes, ensuring the new segment of the story is displayed
+                        startDelay={100}
+                        hideCursorAfterText={true}
+                        text={currentStory.text}
+                        typeSpeed={30} // Controls the speed at which characters appear (in milliseconds)
+                    />
+                </div>
+                {typingFinished && (
                 <div className="mt-4 flex justify-center">
                     {bothChoicesLeadToEnd ? (
                         <a href='/Story'><button className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 rounded">Restart</button></a>
@@ -211,6 +235,7 @@ const Story = () => {
                         ))
                     )}
                 </div>
+                )}
             </div>
         </div>
         

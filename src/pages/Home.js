@@ -4,7 +4,7 @@ const Home = () => {
             <div className="bg-white border rounded-lg shadow-xl p-10 my-104 mx-10 w-620">
                 <h1 className="text-center text-2xl font-bold">Welcome to Whispers in the Woods</h1>
                 <br></br>
-                <p className="text-center">Enter a chilling tale of mystery and terror where your choices determine 
+                <p className="text-center font-normal">Enter a chilling tale of mystery and terror where your choices determine 
                     the fate of four friends trapped in a cursed cabin. Prepare to face the whispers of the forest—will 
                     you uncover its secrets or become another lost soul?</p>
                 <br></br>
