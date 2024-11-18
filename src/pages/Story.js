@@ -194,7 +194,7 @@ const Story = () => {
         currentStory.choices[0].nextSegment === 0 &&
         currentStory.choices[1].nextSegment === 0;
 
-    const typingTime = currentStory.text.length * 30 + 1500;
+    const typingTime = currentStory.text.length * 20 + 1500;
 
     // Reset typingFinished and start timer when segment changes
     useEffect(() => {
@@ -216,7 +216,7 @@ const Story = () => {
                         startDelay={100}
                         hideCursorAfterText={true}
                         text={currentStory.text}
-                        typeSpeed={30} // Controls the speed at which characters appear (in milliseconds)
+                        typeSpeed={20} // Controls the speed at which characters appear (in milliseconds)
                     />
                 </div>
                 {typingFinished && (
