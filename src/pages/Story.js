@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import TypeWriterEffect from 'react-typewriter-effect';
 import segments from '../components/StoryData';
 
-const Story = () => {
-    const [currentSegment, setCurrentSegment] = useState(0);
+const Story = ({ index }) => {
+    const [currentSegment, setCurrentSegment] = useState(index ? index : 0);
     const [typingFinished, setTypingFinished] = useState(false);
 
     const currentStory = segments[currentSegment];
