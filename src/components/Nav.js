@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Logo from '../assets/Butterfly-Effect-Logo.png';
 
-
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 

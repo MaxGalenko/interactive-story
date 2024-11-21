@@ -3,16 +3,17 @@ import TypeWriterEffect from 'react-typewriter-effect';
 import segments from '../components/StoryData';
 
 const Story = ({ index }) => {
-    const [currentSegment, setCurrentSegment] = useState(index ? index : 0);
+    const [currentSegment, setCurrentSegment] = useState(index ? index : 0); // Starts the story at the index of the choice in the Choices page
     const [typingFinished, setTypingFinished] = useState(false);
 
     const currentStory = segments[currentSegment];
 
+    // True if the 2 choices lead to the beginning of the story
     const bothChoicesLeadToEnd = currentStory.choices.length === 2 &&
         currentStory.choices[0].nextSegment === 0 &&
         currentStory.choices[1].nextSegment === 0;
 
-    const typingTime = currentStory.text.length * 10 + 1200;
+    const typingTime = currentStory.text.length * 10 + 1200; // Makes the buttons appear 1200 milliseconds after the typing stops
 
     // Reset typingFinished and start timer when segment changes
     useEffect(() => {
@@ -39,6 +40,7 @@ const Story = ({ index }) => {
                 </div>
                 {typingFinished && (
                     <div className="mt-4 flex justify-center">
+                        {/* Renders 2 choice buttons or restart button when you reached the end of the story */}
                         {bothChoicesLeadToEnd ? (
                             <a href='/Story'><button className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 rounded">Restart</button></a>
                         ) : (

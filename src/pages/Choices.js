@@ -9,7 +9,6 @@ const BinaryTreeLayout = ({ onClick }) => {
                 <button onClick={() => onClick(0)} className="bg-emerald-500 hover:bg-emerald-700 shadow-lg shadow-emerald-500/50 hover:shadow-emerald-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
                     Beginning
                 </button>
-                {/* Line connecting to level 1 (visible only on sm and larger) */}
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
             </div>
 
@@ -89,11 +88,13 @@ const Choices = () => {
 
     return (
         <div>
+            {/* Removes choices tree view after clicking a story node to load story at the selected index */}
             {renderPage && (
                 <div className='flex justify-center'>
                     <div className="flex flex-col items-center bg-white border rounded-lg shadow-xl py-14 my-12 mx-2">
                         <h1 className="text-center text-2xl font-bold">Choose Where To Start The Story</h1>
                         <br></br>
+                        {/*  */}
                         <BinaryTreeLayout onClick={handleClick} />
                     </div>
                 </div>
