@@ -38,26 +38,26 @@ const Story = ({ index }) => {
                     />
                 </div>
                 {typingFinished && (
-                <div className="mt-4 flex justify-center">
-                    {bothChoicesLeadToEnd ? (
-                        <a href='/Story'><button className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 rounded">Restart</button></a>
-                    ) : (
-                        currentStory.choices.map((choice, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentSegment(choice.nextSegment)}
-                                className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 mx-4 rounded"
-                            >
-                                {choice.text}
-                            </button>
-                        ))
-                    )}
-                </div>
+                    <div className="mt-4 flex justify-center">
+                        {bothChoicesLeadToEnd ? (
+                            <a href='/Story'><button className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 rounded">Restart</button></a>
+                        ) : (
+                            currentStory.choices.map((choice, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentSegment(choice.nextSegment)}
+                                    className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 mx-4 rounded"
+                                >
+                                    {choice.text}
+                                </button>
+                            ))
+                        )}
+                    </div>
                 )}
             </div>
         </div>
-        
+
     );
 }
- 
+
 export default Story;
