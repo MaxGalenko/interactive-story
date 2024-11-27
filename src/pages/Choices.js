@@ -3,74 +3,72 @@ import Story from './Story';
 
 const BinaryTreeLayout = ({ onClick }) => {
     return (
-        <div className="relative flex flex-col items-center px-2">
-            {/* Root Node (Open Story 0) */}
-            <div className="relative mb-12">
-                <button onClick={() => onClick(0)} className="bg-emerald-500 hover:bg-emerald-700 shadow-lg shadow-emerald-500/50 hover:shadow-emerald-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                    Beginning
-                </button>
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-            </div>
-
-            {/* Horizontal line connecting level 1 */}
-            <hr className="border-t-4 border-gray-600 my-4 w-4/5 sm:w-2/3 sm:block hidden" />
-            <br /><br />
-
-            {/* Level 1 Nodes */}
-            <div className="flex flex-col sm:flex-row justify-evenly mb-12 w-full relative">
-                <div className="relative mb-6 sm:mb-0">
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <button onClick={() => onClick(1)} className="bg-teal-500 hover:bg-teal-700 shadow-lg shadow-teal-500/50 hover:shadow-teal-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                        Investigate the whispers.
-                    </button>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                </div>
-
-                <div className="relative mb-6 sm:mb-0">
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <button onClick={() => onClick(5)} className="bg-teal-500 hover:bg-teal-700 shadow-lg shadow-teal-500/50 hover:shadow-teal-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                        Stay inside the cabin.
-                    </button>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                </div>
-            </div>
-
-            {/* Horizontal line connecting level 2 */}
-            <div className="flex justify-center items-center space-x-4 my-4 w-full">
-                <hr className="border-t-4 border-gray-600 w-4/5 sm:w-2/5 sm:block hidden" />
-                <hr className="border-t-4 border-gray-600 w-4/5 sm:w-2/5 sm:block hidden" />
-            </div>
-            <br /><br />
-
-            {/* Level 2 Nodes */}
-            <div className="flex flex-col sm:flex-row justify-evenly w-full relative">
-                <div className="relative mb-6 sm:mb-0 px-2">
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <button onClick={() => onClick(2)} className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                        Try to decipher the carvings.
-                    </button>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                </div>
-
-                <div className='relative mb-6 sm:mb-0 px-2 w-40'>
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                </div>
-
-                <div className="relative mb-6 sm:mb-0 px-2">
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <button onClick={() => onClick(6)} className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                        Look out the window.
-                    </button>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                </div>
-
-                <div className="relative mb-6 sm:mb-0 px-2">
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
-                    <button onClick={() => onClick(9)} className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white text-sm font-bold px-4 py-2 w-40 sm:w-40 rounded">
-                        Read the journal found in the attic.
-                    </button>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gray-700 sm:block hidden"></div>
+        <div class="container">
+            <div class="row">
+                <div class="tree">
+                    <ul>
+                        <li> <button onClick={() => onClick(0)} title='Introduction'><span>⚫</span></button>
+                            <ul>
+                                <li><button onClick={() => onClick(1)} title='Investigate the whispers'><span>⚫</span></button>
+                                    <ul>
+                                        <li> <button onClick={() => onClick(2)} title='Try to decipher the carvings'><span>⚫</span></button>
+                                            <ul>
+                                                <li> <button onClick={() => onClick(3)} title='Keep studying the carvings'><span>⚫</span></button></li>
+                                                <li> <button onClick={() => onClick(4)} title='Run back to the cabin'><span>⚫</span></button></li>
+                                            </ul>
+                                        </li>
+                                        <li> <button onClick={() => onClick(4)} title='Turn back to the cabin'><span>⚫</span></button></li>
+                                    </ul>
+                                </li>
+                                <li> <button onClick={() => onClick(5)} title='Stay inside the cabin'><span>⚫</span></button>
+                                    <ul>
+                                        <li> <button onClick={() => onClick(6)} title='Look out the window'><span>⚫</span></button>
+                                            <ul>
+                                                <li> <button onClick={() => onClick(7)} title='Open the door and step outside'><span>⚫</span></button></li>
+                                                <li> <button onClick={() => onClick(8)} title='Lock the door and gather in the living room'><span>⚫</span></button></li>
+                                            </ul>
+                                        </li>
+                                        <li> <button onClick={() => onClick(9)} title='Read the journal found in the attic'><span>⚫</span></button>
+                                            <ul>
+                                                <li> <button onClick={() => onClick(10)} title='Read more of the journal'><span>⚫</span></button>
+                                                    <ul>
+                                                        <li> <button onClick={() => onClick(11)} title='Keep reading for a way to help the spirit'><span>⚫</span></button>
+                                                            <ul>
+                                                                <li> <button onClick={() => onClick(12)} title='Attempt the ritual'><span>⚫</span></button></li>
+                                                                <li> <button onClick={() => onClick(13)} title='Leave the cabin and run'><span>⚫</span></button></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li> <button onClick={() => onClick(14)} title='Burn the journal'><span>⚫</span></button>
+                                                            <ul>
+                                                                <li> <button onClick={() => onClick(15)} title='Fight back against the spirits'><span>⚫</span></button>
+                                                                    <ul>
+                                                                        <li> <button onClick={() => onClick(16)} title='Continue fighting'><span>⚫</span></button></li>
+                                                                        <li> <button onClick={() => onClick(17)} title='Try to negotiate with the spirits'><span>⚫</span></button></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li> <button onClick={() => onClick(18)} title='Escape through a window'><span>⚫</span></button></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li> <button onClick={() => onClick(14)} title='Burn the journal'><span>⚫</span></button>
+                                                    <ul>
+                                                        <li> <button onClick={() => onClick(15)} title='Fight back against the spirits'><span>⚫</span></button>
+                                                            <ul>
+                                                                <li> <button onClick={() => onClick(16)} title='Continue fighting'><span>⚫</span></button></li>
+                                                                <li> <button onClick={() => onClick(17)} title='Try to negotiate with the spirits'><span>⚫</span></button></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li> <button onClick={() => onClick(18)} title='Escape through a window'><span>⚫</span></button></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

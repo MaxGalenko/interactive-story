@@ -27,12 +27,13 @@ const Story = ({ index }) => {
 
     return (
         <div className="flex justify-center">
-            <div className='bg-white border rounded-lg shadow-xl p-10 my-12 mx-10 w-620'>
-                <div className="text-lg font-medium">
+            <div className={`${currentStory.bgColor} border rounded-lg shadow-xl p-10 my-12 mx-10 w-620`}>
+                <div className={`text-lg ${currentStory.textColor} font-medium`}>
                     <TypeWriterEffect
                         textStyle={{ textAlign: "justify" }}
                         key={currentSegment} // Re-renders the text when the currentSegment changes, ensuring the new segment of the story is displayed
                         startDelay={100}
+                        cursorColor={currentStory.cursorColor}
                         hideCursorAfterText={true}
                         text={currentStory.text}
                         typeSpeed={10} // Controls the speed at which characters appear (in milliseconds)

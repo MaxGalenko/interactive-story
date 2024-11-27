@@ -6,7 +6,10 @@ const segments = [
         choices: [
             { text: "Investigate the whispers.", nextSegment: 1 },
             { text: "Stay inside the cabin.", nextSegment: 5 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-500"
     },
     {
         // index: 1
@@ -15,7 +18,10 @@ const segments = [
         choices: [
             { text: "Try to decipher the carvings.", nextSegment: 2 },
             { text: "Turn back to the cabin.", nextSegment: 4 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-600"
     },
     {
         // index: 2
@@ -24,7 +30,10 @@ const segments = [
         choices: [
             { text: "Keep studying the carvings.", nextSegment: 3 },
             { text: "Run back to the cabin.", nextSegment: 4 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-700"
     },
     {
         // index: 3
@@ -34,7 +43,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 4
@@ -44,7 +56,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 5
@@ -53,7 +68,10 @@ const segments = [
         choices: [
             { text: "Look out the window.", nextSegment: 6 },
             { text: "Read the journal found in the attic.", nextSegment: 9 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-400"
     },
     {
         // index: 6
@@ -62,7 +80,10 @@ const segments = [
         choices: [
             { text: "Open the door and step outside.", nextSegment: 7 },
             { text: "Lock the door and gather in the living room.", nextSegment: 8 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-700"
     },
     {
         // index: 7
@@ -72,7 +93,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 8
@@ -82,7 +106,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 9
@@ -91,7 +118,10 @@ const segments = [
         choices: [
             { text: "Read more of the journal.", nextSegment: 10 },
             { text: "Burn the journal.", nextSegment: 14 }
-        ]
+        ],
+        cursorColor: "black",
+        textColor: "text-gray-900",
+        bgColor: "bg-gray-300"
     },
     {
         // index: 10
@@ -100,7 +130,10 @@ const segments = [
         choices: [
             { text: "Keep reading for a way to help the spirit.", nextSegment: 11 },
             { text: "Burn the journal.", nextSegment: 14 }
-        ]
+        ],
+        cursorColor: "black",
+        textColor: "text-gray-900",
+        bgColor: "bg-gray-200"
     },
     {
         // index: 11
@@ -109,7 +142,10 @@ const segments = [
         choices: [
             { text: "Attempt the ritual.", nextSegment: 12 },
             { text: "Leave the cabin and run.", nextSegment: 13 }
-        ]
+        ],
+        cursorColor: "black",
+        textColor: "text-gray-900",
+        bgColor: "bg-gray-100"
     },
     {
         // index: 12
@@ -119,7 +155,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "black",
+        textColor: "text-gray-900",
+        bgColor: "bg-gray-50"
     },
     {
         // index: 13
@@ -129,7 +168,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 14
@@ -138,7 +180,10 @@ const segments = [
         choices: [
             { text: "Fight back against the spirits.", nextSegment: 15 },
             { text: "Escape through a window.", nextSegment: 18 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-700"
     },
     {
         // index: 15
@@ -147,7 +192,10 @@ const segments = [
         choices: [
             { text: "Continue fighting.", nextSegment: 16 },
             { text: "Try to negotiate with the spirits.", nextSegment: 17 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-800"
     },
     {
         // index: 16
@@ -157,7 +205,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 17
@@ -167,7 +218,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     },
     {
         // index: 18
@@ -177,7 +231,10 @@ const segments = [
         choices: [
             { text: "", nextSegment: 0 },
             { text: "", nextSegment: 0 }
-        ]
+        ],
+        cursorColor: "white",
+        textColor: "text-gray-100",
+        bgColor: "bg-gray-950"
     }
 ];
 
