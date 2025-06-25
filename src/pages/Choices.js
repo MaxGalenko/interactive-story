@@ -1,7 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Story from './Story';
 
 const BinaryTreeLayout = ({ onClick }) => {
+    const visitedSegments = [];
+    
+    const [visitedIndex, setVisitedIndex] = useState(() => {
+        return localStorage.getItem('index');
+    });
+    
+    useEffect(() => {
+        console.log("EH");
+    }, [visitedIndex]);
+
     return (
         <div class="container">
             <div class="row">

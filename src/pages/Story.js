@@ -6,6 +6,20 @@ const Story = ({ index }) => {
     const [currentSegment, setCurrentSegment] = useState(index ? index : 0); // Starts the story at the index of the choice in the Choices page
     const [typingFinished, setTypingFinished] = useState(false);
 
+    useEffect(() => {
+        const currentIndex = localStorage.getItem('index');
+        if (currentSegment === 0) {
+            localStorage.setItem('index', String(currentSegment));
+        } else {
+            localStorage.setItem('index', currentIndex + ',' + String(currentSegment));
+        }
+        //localStorage.setItem('index', '');
+    }, [currentSegment]);
+
+    const nextStory = (storyChoice) => {
+        setCurrentSegment(storyChoice);
+    };
+
     const currentStory = segments[currentSegment];
 
     // True if the 2 choices lead to the beginning of the story
@@ -48,7 +62,7 @@ const Story = ({ index }) => {
                             currentStory.choices.map((choice, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => setCurrentSegment(choice.nextSegment)}
+                                    onClick={() => nextStory(choice.nextSegment)}
                                     className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 mx-4 rounded"
                                 >
                                     {choice.text}
