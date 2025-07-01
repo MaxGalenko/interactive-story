@@ -7,18 +7,16 @@ const Story = ({ index }) => {
     const [typingFinished, setTypingFinished] = useState(false);
 
     useEffect(() => {
-        const currentIndex = localStorage.getItem('index');
-        if (currentSegment === 0) {
-            localStorage.setItem('index', String(currentSegment));
-        } else {
-            localStorage.setItem('index', currentIndex + ',' + String(currentSegment));
+        const stored = localStorage.getItem('index');
+        let indexArray = stored ? stored.split(',') : [];
+
+        if (indexArray[indexArray.length - 1] !== String(currentSegment) && !indexArray.includes(String(currentSegment))) {
+            indexArray.push(String(currentSegment));
+            indexArray.sort();
+            localStorage.setItem('index', indexArray.join(','));
         }
         //localStorage.setItem('index', '');
     }, [currentSegment]);
-
-    const nextStory = (storyChoice) => {
-        setCurrentSegment(storyChoice);
-    };
 
     const currentStory = segments[currentSegment];
 
@@ -62,7 +60,7 @@ const Story = ({ index }) => {
                             currentStory.choices.map((choice, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => nextStory(choice.nextSegment)}
+                                    onClick={() => setCurrentSegment(choice.nextSegment)}
                                     className="bg-cyan-500 hover:bg-cyan-700 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-700/70 text-white font-bold py-2 px-4 mx-4 rounded"
                                 >
                                     {choice.text}
