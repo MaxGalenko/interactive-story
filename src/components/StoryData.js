@@ -117,7 +117,7 @@ const segments = [
         text: "As the friends recover from the chilling experience of the night, Evelyn opens the old journal, revealing entries filled with madness and despair. “We have to know what happened here,” she urges. But Jake is hesitant. “What if it’s cursed? We should burn it and be done with it.” The group debates, the tension rising as the pages reveal the tragic fates of those who came before.",
         choices: [
             { text: "Read more of the journal.", nextSegment: 10 },
-            { text: "Burn the journal.", nextSegment: 14 }
+            { text: "Throw away the journal.", nextSegment: 19 }
         ],
         cursorColor: "black",
         textColor: "text-gray-900",
@@ -235,7 +235,43 @@ const segments = [
         cursorColor: "white",
         textColor: "text-gray-100",
         bgColor: "bg-gray-950"
-    }
+    },
+    {
+    // index: 19
+    // The player chose to Throw away the journal
+    text: "They toss the journal into the fireplace without lighting it, hoping to distance themselves from its madness. But the whispers persist, lingering like smoke in the air. Evelyn suggests burying it outside, while Mark proposes sealing it in a box under the floorboards.",
+    choices: [
+        { text: "Bury the journal in the forest.", nextSegment: 20 },
+        { text: "Seal the journal under the floorboards.", nextSegment: 21 }
+    ],
+    cursorColor: "white",
+    textColor: "text-gray-100",
+    bgColor: "bg-gray-600"
+},
+{
+    // index: 20
+    // Ending: Roots of the Past
+    text: "The friends bury the journal deep beneath the forest floor. For a time, the whispers fade. But as they leave the woods, Evelyn hears her name whispered one last time. The curse is dormant—but not broken. Something still watches from the shadows.",
+    choices: [
+        { text: "", nextSegment: 0 },
+        { text: "", nextSegment: 0 }
+    ],
+    cursorColor: "white",
+    textColor: "text-gray-100",
+    bgColor: "bg-gray-700"
+},
+{
+    // index: 21
+    // Ending: Beneath the Boards
+    text: "They hide the journal beneath the cabin floor, sealing it away. That night, the house groans as if alive, but the spirits do not return. Morning comes, and the friends escape. Yet, deep below, the journal waits—whispers muffled, but not silenced.",
+    choices: [
+        { text: "", nextSegment: 0 },
+        { text: "", nextSegment: 0 }
+    ],
+    cursorColor: "white",
+    textColor: "text-gray-100",
+    bgColor: "bg-gray-400"
+}
 ];
 
 export default segments;

@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // assets
-import BgImage from './assets/Butterfly-Effect-Bg.png';
+import BgImage from './assets/Butterfly-Effect-Bg-Light.png';
 // components
 const Nav = lazy(() => import('./components/Nav'));
 // pages
@@ -17,7 +17,7 @@ function App() {
     <Router>
       <div className='flex flex-col h-screen'>
         <Nav />
-        <div className='flex-grow bg-repeat-space' style={{ backgroundImage: `url(${BgImage})`, backgroundSize: '150px' }}>
+        <div className='flex-grow bg-repeat-space' style={{ backgroundImage: `url(${BgImage})`, backgroundSize: '150px', backgroundColor: 'white' }}>
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/Story' element={<Story />} />

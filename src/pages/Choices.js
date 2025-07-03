@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Story from './Story';
 
 const BinaryTreeLayout = ({ onClick }) => {
@@ -6,9 +6,9 @@ const BinaryTreeLayout = ({ onClick }) => {
     let indexArray = stored ? stored.split(',') : [];
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="tree">
+        <div id="container">
+            <div id="row">
+                <div id="tree">
                     <ul>
                         <li> <button onClick={() => onClick(0)} title='Introduction'><span>{indexArray.includes('0') ? '🟢' : '⚫'}</span></button>
                             <ul>
@@ -54,15 +54,10 @@ const BinaryTreeLayout = ({ onClick }) => {
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li> <button onClick={() => onClick(14)} title='Burn the journal'><span>{indexArray.includes('14') ? '🟢' : '⚫'}</span></button>
+                                                <li> <button onClick={() => onClick(19)} title='Throw away the journal'><span>{indexArray.includes('19') ? '🟢' : '⚫'}</span></button>
                                                     <ul>
-                                                        <li> <button onClick={() => onClick(15)} title='Fight back against the spirits'><span>{indexArray.includes('15') ? '🟢' : '⚫'}</span></button>
-                                                            <ul>
-                                                                <li> <button onClick={() => onClick(16)} title='Continue fighting'><span>{indexArray.includes('16') ? '🟢' : '⚫'}</span></button></li>
-                                                                <li> <button onClick={() => onClick(17)} title='Try to negotiate with the spirits'><span>{indexArray.includes('17') ? '🟢' : '⚫'}</span></button></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li> <button onClick={() => onClick(18)} title='Escape through a window'><span>{indexArray.includes('18') ? '🟢' : '⚫'}</span></button></li>
+                                                        <li> <button onClick={() => onClick(15)} title='Bury the journal in the forest'><span>{indexArray.includes('20') ? '🟢' : '⚫'}</span></button></li>
+                                                        <li> <button onClick={() => onClick(18)} title='Seal the journal under the floorboards'><span>{indexArray.includes('21') ? '🟢' : '⚫'}</span></button></li>
                                                     </ul>
                                                 </li>
                                             </ul>
