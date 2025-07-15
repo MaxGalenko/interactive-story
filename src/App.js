@@ -1,8 +1,7 @@
-import { lazy } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// assets
-import BgImage from './assets/Butterfly-Effect-Bg-Light.png';
+
 // components
 const Nav = lazy(() => import('./components/Nav'));
 // pages
@@ -13,11 +12,40 @@ const Choices = lazy(() => import('./pages/Choices'));
 const Settings = lazy(() => import('./pages/Settings'));
 
 function App() {
+  const [bgImage, setBgImage] = useState(() => {
+    // Get the image name from localStorage or default to 'White'
+    return localStorage.getItem('BgImage') || 'White';
+  });
+
+  useEffect(() => {
+    // Listen to changes in localStorage in the same tab
+    const interval = setInterval(() => {
+      const stored = localStorage.getItem('BgImage');
+      if (stored !== bgImage) {
+        setBgImage(stored);
+      }
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, [bgImage]);
+
+  const bgMap = {
+    White: require('./assets/Butterfly-Effect-Bg-Light.png'),
+    Black: require('./assets/Butterfly-Effect-Bg-Dark.png'),
+  };
+
   return (
     <Router>
       <div className='flex flex-col h-screen'>
         <Nav />
-        <div className='flex-grow bg-repeat-space' style={{ backgroundImage: `url(${BgImage})`, backgroundSize: '150px', backgroundColor: 'white' }}>
+        <div
+          className='flex-grow bg-repeat-space'
+          style={{
+            backgroundImage: `url(${bgMap[bgImage]})`,
+            backgroundSize: '150px',
+            backgroundColor: bgImage,
+          }}
+        >
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/Story' element={<Story />} />
