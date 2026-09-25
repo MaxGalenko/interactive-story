@@ -11,4 +11,4 @@
 >> npm start
 >> ```
 
-### Live Demo: https://interactive-story-maxym.vercel.app
+### Live Demo: [Interactive Story](https://interactive-story-maxym.vercel.app)
